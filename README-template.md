@@ -1,6 +1,6 @@
 # Frontend Mentor - Results summary component solution
 
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -34,7 +34,7 @@ Users should be able to:
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
 
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
@@ -42,8 +42,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://github.com/khabbab50/frontend-mentor-results-summary-component-main.git)
+- Live Site URL: [Live site URL here](https://khabbab50.github.io/frontend-mentor-results-summary-component-main/)
 
 ## My process
 
@@ -67,17 +67,218 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<!-----------------------------------------------------------
+      main section start
+    ------------------------------------------------------------>
+<main class="main">
+  <!-- your result start  -->
+  <div class="your-result">
+    <h3>Your Result</h3>
+    <div class="circl">
+      <h1>76</h1>
+      <p>of 100</p>
+    </div>
+    <h2>Great</h2>
+    <p>You scored higher than 65% of the people who have taken these tests.</p>
+  </div>
+  <!-- your result end -->
+
+  <!-- summary start  -->
+  <div class="summary">
+    <h3>Summary</h3>
+
+    <div class="reaction flex-item">
+      <p>
+        <span><i class="fa-solid fa-bolt"></i> Reaction</span>
+      </p>
+      <p><strong>80</strong> / 100</p>
+    </div>
+
+    <div class="memory flex-item">
+      <p>
+        <span><i class="fa-brands fa-dribbble"></i> Memory</span>
+      </p>
+      <p><strong>92</strong> / 100</p>
+    </div>
+
+    <div class="verbal flex-item">
+      <p>
+        <span><i class="fa-regular fa-comment"></i> Verbal</span>
+      </p>
+      <p><strong>61</strong> / 100</p>
+    </div>
+
+    <div class="visual flex-item">
+      <p>
+        <span><i class="fa-regular fa-eye"></i> Visual</span>
+      </p>
+      <p><strong>72</strong> / 100</p>
+    </div>
+
+    <button class="btn">Continue</button>
+  </div>
+  <!-- summary end -->
+</main>
+<!-----------------------------------------------------------
+      main section end
+    ------------------------------------------------------------>
 ```
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+/*============================================================
+ main section  start  
+ ===========================================================*/
+body {
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.main {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0.2rem 0.2rem 2rem hsl(221, 100%, 96%);
+  border-radius: 30px;
+}
+/* your result start  */
+.main .your-result {
+  width: 50%;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  padding: 50px;
+  border-radius: 30px;
+}
+.main .your-result h3 {
+  color: var(--light-lavender);
+}
+.main .your-result .circl {
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+.main .your-result .circl h1 {
+  font-size: 80px;
+}
+.main .your-result .circl p {
+  color: hsl(241deg 100% 89% / 60%);
+  font-size: 16px;
+}
+.main .your-result h2 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+.main .your-result p {
+  color: var(--light-lavender);
+}
+/* your result end */
+
+/* summary start  */
+.main .summary {
+  width: 50%;
+  padding: 50px;
+}
+.main .summary h3 {
+  margin-bottom: 20px;
+  color: var(--dark-gray-blue);
+  font-size: 25px;
+}
+.flex-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .summary .reaction {
+  background: hsl(0deg 100% 67% / 10%);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+.main .summary .reaction p {
+}
+.main .summary .reaction span {
+  color: var(--light-red);
+}
+.main .summary .memory {
+  background: hsl(39deg 100% 56% / 10%);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+.main .summary .memory span {
+  color: var(--orangey-yellow);
+}
+.main .summary .memory p {
+}
+.main .summary .verbal {
+  background: hsl(166deg 100% 37% / 10%);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+.main .summary .verbal span {
+  color: var(--reen-teal);
+}
+.main .summary .verbal p {
+}
+.main .summary .visual {
+  background: hsl(234deg 85% 45% / 10%);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+.main .summary .visual span {
+  color: var(--cobalt-blue);
+}
+.main .summary .visual p {
+}
+.main .summary .btn {
+  width: 100%;
+  padding: 20px 0;
+  background: var(--dark-gray-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+.main .summary .btn:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+/* summary end  */
+/*============================================================
+ main section end
+ ===========================================================*/
 ```
+
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  console.log("🎉");
+};
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
@@ -99,9 +300,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Md Khabbab Hossen](https://github.com/khabbab50)
+- Frontend Mentor - [@khabbab50](https://www.frontendmentor.io/profile/khabbab50)
+- Facebook - [@khabbab51](https://www.facebook.com/khabbab51)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
